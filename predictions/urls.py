@@ -21,6 +21,6 @@ urlpatterns = [
     path('writers/', writers_view, name='Writers'),
     path('nested/new', nested_view),
     path('article/', article_view, name='article'),
-path('article/<int:some_number>/', depends_on_number_in_url_view, name="random_article"),
+    path('article/<int:some_number>/', depends_on_number_in_url_view, name="random_article"),
     path('article/<int:some_number>/<slug:slug_text>/', depends_on_number_in_url_view, name="random_article")
 ]
