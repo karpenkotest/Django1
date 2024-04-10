@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}
 <br>
+<a href={% url 'random_article' some_number %}> Go to page {{ some_number }} </a>
 <br>
 <br>
 <br>
@@ -8,9 +9,27 @@
 <br>
 Article number is  {{result}}
 <br>
+{% if text%}
+{{ text }}
+{% endif%}
+
+<br>
+<br>
+
+
+
+<br>
+<br>
+<br>
+<br>
+{% include 'with_slug_text.html' with slug_text='It is slug text added by Yuliia' %}
+
+
+<br>
 <br>
 <br>
 <br>
 <br>
 <br>
 {% endblock %}
+

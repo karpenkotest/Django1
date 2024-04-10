@@ -11,11 +11,11 @@ def depends_on_number_in_url_view(request,some_number, slug_text=None):
     else:
         result="Odd"
 
-    context={'result':result,
+    content={'result':result,
              'text':slug_text,
-             'number':randint(0,100)
+             'some_number':randint(0,100)
     }
-    return render(request,'depends_on_number.html', context)
+    return render(request,'depends_on_number.html', content)
 
 
 def predictions_view(request):
@@ -30,10 +30,10 @@ def random_view(request):
         0:"Stay at home",
         1:"Go to work",
         2:"Go to gym",
-        3: "Buy a ticket to Ukraine",
-        4: "Buy a ticket to Paris",
-        5: "Drink a coffe",
-        6: "Watch a favorite film"
+        3:"Buy a ticket to Ukraine",
+        4:"Buy a ticket to Paris",
+        5:"Drink a coffe",
+        6:"Watch a favorite film"
     }
     response=response_dict.get(random_number)
     return HttpResponse(response)
