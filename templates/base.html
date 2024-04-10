@@ -1,0 +1,18 @@
+{% block head %}
+<title>ARTICLE</title>
+	{% block title %} Home {% endblock %}
+	{% block menu %}{% endblock %}
+{% endblock %}
+
+{% block page %}
+	{% block content %}Inherited from base template!!!!
+	{% endblock %}
+{% endblock %}
+
+{% block footer %}
+	{% block copyright %}<div>
+    <a href="{% url 'index' %}">Index</a>
+</div>
+	{% endblock %}
+{% endblock %}
+This text and link above are  inherited from the base.html

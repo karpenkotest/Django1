@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +54,8 @@
 
 	</body>
     <h1>Students of group Python 11</h1>
-
+<br>
+{{my_str}}
 <div class="my">
              <form action=" https://jsonplaceholder.typicode.com/posts" method="POST">
                <input name="userID" id="userId" type="hidden" readonly value="1" >
@@ -63,7 +65,9 @@
                  <input name="LastName" id="LastName" type="text" required>
               <input type="Submit" value="Submit">
 </div>
-
+<div>
+    <a href="{% url 'dashboard' %}">Dashboard</a>
+</div>
     </form>
 
 
@@ -75,3 +79,5 @@
 
 </body>
 </html>
+
+
